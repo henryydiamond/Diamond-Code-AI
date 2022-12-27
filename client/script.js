@@ -16,3 +16,16 @@ const loader = (el) => {
     }
   }, 300);
 };
+
+const typeText = (el, text) => {
+  let index = 0;
+
+  let interval = setInterval(() => {
+    if (index < text.length) {
+      el.innerHtml += text.charAt(index);
+      index++;
+    } else {
+      clearInterval(interval);
+    }
+  }, 20);
+};
